@@ -5,7 +5,6 @@ import time
 from operator import itemgetter
 from datetime import datetime
 app=Flask(__name__)
-app.config["DEBUG"]=True
 def createDateTime(obj):
     obj["time"]=datetime.strptime(obj["time"],"%Y-%m-%d %H:%M:%S")
     return obj
