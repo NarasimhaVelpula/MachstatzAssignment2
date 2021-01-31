@@ -18,6 +18,9 @@ data2=list(map(createDateTime,requests.get('https://gitlab.com/-/snippets/206788
 data3=list(map(createDateTime2,requests.get('https://gitlab.com/-/snippets/2067888/raw/master/sample_json_3.json').json()))
 
 #print(data1)
+@app.route('/',methods=['GET'])
+def func():
+    return "Provide proper APIs"
 @app.route('/question1',methods=['GET'])
 def home():
     date1=datetime.strptime(request.args.get('start_time'),"%Y-%m-%dT%H:%M:%SZ")
